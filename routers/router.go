@@ -24,6 +24,9 @@ func init() {
 	//商品搜索
 	beego.Router("/goodsSearch",&controllers.GoodsController{},"post:HandleSearch")
 
+	//添加购物车
+	beego.Router("/user/addCart",&controllers.CartController{},"post:HandleAddCart")
+
 	//退出登录
 	beego.Router("/user/logout",&controllers.UserController{},"get:Logout")
 	//用户中心信息页
